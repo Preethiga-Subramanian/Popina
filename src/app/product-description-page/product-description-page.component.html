@@ -1,0 +1,91 @@
+<div class="bg">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+      <div class="pt-5">
+        <small>Menu/Everyday Value/Wisconsin Mac & Cheese</small>
+      </div>
+      <h2 class="pt-4 pb-4">WISCONSIN MAC & CHEESE</h2>
+      <p><b>A Classic blend of cheddar and jack cheese, cream & elbow macaroni</b></p>
+      <h6><b>$11.02</b></h6>
+      <hr>
+      <h6 class="pt-3 pb-3"><b class="pe-4">Pick Your Size</b><small>Choose One Option</small></h6>
+      <form>
+        <input type="radio" id="regular" name="size" value="Regular">
+        <label class="ps-3 pe-3" for="regular"><h6><b>Regular</b><br><span>+$7.25&nbsp;&nbsp;&nbsp;adds 980 cals</span></h6></label><br>
+        <input type="radio" id="small" name="size" value="Small">
+        <label class="ps-3 pe-3" for="small"><h6><b>Small</b><br><span>+$6.05&nbsp;&nbsp;&nbsp;adds 490 cals</span></h6></label><br>
+      </form>
+      <hr>
+      <h6 class="pt-3 pb-3"><b class="pe-4">Customize</b></h6>
+      <input type="checkbox" id="customize" name="customize" value="Customize">
+      <label class="ps-3 pe-3" for="customize">Customize</label><br>
+      <hr>
+      <h6 class="pt-3 pb-3"><b class="pe-4">Remove</b></h6>
+      <input type="checkbox" id="remove" name="remove" value="Remove">
+      <label class="ps-3 pe-3" for="remove">Remove Cheddar Jack</label><br>
+      <hr>
+
+
+    </div>
+    <div class="col-md-12 col-lg-6">
+      <img src="../../assets/mac&cheese.avif" alt="Wisconsia Mac & cheese" width="100%" height="100%">
+    </div>
+  </div>
+
+  <!-- "Select Protein" Section -->
+  <div class="row">
+    <div class="col-md-12 col-lg-6">
+      <h6 class="pt-3 pb-3"><b class="pe-4">Pick Your Protein</b><small>Choose One Option</small></h6>
+      <!-- <div class="row">
+        <div *ngFor="let protein of proteinsList" class="col-sm-6 col-md-3 col-lg-4">
+          <div class="card">
+            <span class="layer ps-2 pe-2 rounded-2">Standard</span>
+            <label>
+              <input  type="radio" id={{protein.name}} name="meatOrtofu" value={{protein.name}}>
+              <img class="image rounded-circle" src="../../assets/tick.jpg">
+              <img class="card-img-top" src="../../assets/tofu3.jpg" alt="Card image">
+            </label>
+            <div [ngClass]="myFunction(protein)" class="card-body">
+              <h5 class="card-title">{{protein.name}}</h5>
+              <p class="card-text d-flex justify-content-center">+${{protein.price}}&nbsp;|&nbsp;{{protein.cal}}&nbsp;cal</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="row ">
+        <div *ngFor="let protein of proteinsList" class="col-sm-6 col-md-3 col-lg-4 d-flex justify-content-center p-0 p-2">
+          <label>
+            <input type="radio" id={{protein.name}} name="meatOrtofu" value={{protein.name}} class="card-input-element" />
+              <div class="card card-default card-input">
+                <span class="layer ps-2 pe-2 rounded-2">STANDARD</span>
+                <img class="image rounded-circle" src="../../assets/tick.jpg">
+                <div class="d-flex justify-content-center">
+                  <img class="card-img-top" src="../../assets/tofu3.jpg" alt="Card image">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{protein.name}}</h5>
+                  <p class="card-text d-flex justify-content-center">+${{protein.price}}&nbsp;|&nbsp;{{protein.cal}}&nbsp;cal</p>
+                </div>
+              </div>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-12 col-lg-6 d-flex justify-content-end">
+      <img src="../../assets/pdp-background.png" alt="PDP-Background-Image" width="80%" height="80%">
+    </div>
+  </div>
+
+</div>
+
+<div class="d-flex justify-content-center">
+  <a routerLink="/newmenu" class="btn btn-dark">Back</a>
+</div>
+
+
+</div>

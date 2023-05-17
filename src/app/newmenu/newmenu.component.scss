@@ -1,0 +1,27 @@
+img {
+  position: absolute;
+  top: -150px;
+  z-index: +1;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  border: 5px solid orange;
+}
+
+.card{
+  transition: all .4s ease-in-out;
+  width: 400px;
+  height: 400px;
+}
+
+.foodCard{
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.foodDetail{
+  padding-top: 200px;;
+}

@@ -1,0 +1,129 @@
+.bg{
+  background-color: #F9F6EE;
+}
+
+.card-img-top{
+  padding: 8px 20px;
+}
+.card-body{
+  padding: 0px 8px 16px 8px;
+}
+.card-title{
+  margin: 0px;
+  text-align: center;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-text{
+  padding: 8px 0px 0px 0px;
+  margin: 0px;;
+}
+.layer{
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  z-index: +1;
+  color: blue;
+  border: 2px solid blue;
+}
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 180px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .card{
+    width: 180px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card{
+    width: 180px;
+  }
+  .card-img-top{
+    width: 127px;
+    height: 108px;
+  }
+  .card-title{
+    font-size: 14px;
+  }
+  .card-text{
+    font-size: 12px;
+  }
+  .layer{
+    display:none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .card{
+    width: inherit;
+  }
+  .card-img-top{
+    width: 166px;
+    height: 141px;
+  }
+  .card-title{
+    font-size: 16px;
+  }
+  .card-text{
+    font-size: 14px;
+  }
+  .layer{
+    display:block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .card{
+    // width: 200px;
+    width: inherit;
+  }
+  .card-img-top{
+    width: 166px;
+    height: 141px;
+  }
+  .card-title{
+    font-size: 16px;
+  }
+  .card-text{
+    font-size: 14px;
+  }
+  .layer{
+    display:block;
+  }
+}
+.image{
+  display: none;
+}
+.card-input-element {
+  display: none;
+}
+.card-input:hover {
+  cursor: pointer;
+}
+.card-input-element:checked + .card-input {
+  border: 3px solid blue;
+}
+.card-input-element:checked ~ .card-input .layer{
+  background-color: blue;
+  color:white;
+}
+.card-input-element:checked ~ .card-input .image{
+  position:absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+  width: 25px;
+  height:25px;
+  display: block;
+}
+.card-input-element:checked ~ .card-input .card-title{
+  font-weight: bold;
+}
+
+.card-input-element:checked ~ .card-input .card-text{
+  font-weight: bold;
+}
+

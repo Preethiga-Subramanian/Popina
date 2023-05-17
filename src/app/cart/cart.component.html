@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngFor="let cartItem of cartDetails" class="row">
+    <div class="col">
+      <div class="card p-3 d-flex flex-column flex-md-row">
+        <div>
+          FoodImage
+        </div>
+        <div class="px-5">
+          <p>{{cartItem.foodName}}</p>
+          <p>{{cartItem.quantity}}</p>
+          <p>{{cartItem.price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

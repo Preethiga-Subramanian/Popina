@@ -1,0 +1,25 @@
+.food-img{
+  border-radius: 3%;
+  width: 260px;
+  height: 255px;
+  object-fit: cover;
+}
+img{
+  transition: transform .5s ease;
+}
+img:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  object-fit: cover;
+}
+.line-style{
+  border-top: 1px solid grey;
+  margin-right: 3%;
+  margin-left:1%;
+  flex:1 1;
+  margin-top:20px;
+}
+.foodDesc{
+  color:grey;
+  font-weight: light;
+}

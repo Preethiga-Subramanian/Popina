@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="d-flex align-items-centre flex-column flex-md-row">
+    <img class="rounded-5" src={{foodDetails[0].imageUrl}} alt={{foodDetails[0].name}} width="400px" height="400px">
+    <div class="p-5">
+      <h2>{{foodDetails[0].name}}</h2>
+      <p><b>₹{{foodDetails[0].price}}</b>
+        <div class="d-flex align-items-centre flex-column flex-md-row">
+          <span *ngIf="foodDetails[0].isVeg;else elseBlock">
+            <img src="../../assets/veg.jpg" alt="veg" width="20px" height="20px">&nbsp;
+          </span>
+          <ng-template #elseBlock><img src="../../assets/nonveg.jpg" alt="veg" width="20px" height="20px">&nbsp;</ng-template>
+          <span>•</span>&nbsp;
+          <p class="foodDesc">{{foodDetails[0].stars}}☆</p>&nbsp;
+          <span>•</span>&nbsp;
+          <p class="foodDesc">{{foodDetails[0].cookTime}} mins</p>
+        </div>
+        <span class="border-2 rounded-pill bg-dark text-white px-2">{{foodDetails[0].origins}}</span>
+        <p>{{foodDetails[0].Description}} </p>
+        <div class="d-flex justify-content-center" id="addToCartButton">
+          <button *ngIf="!isItemAdded" class="btn btn-danger btn-lg btn-block" (click)="addToCart(foodDetails[0])">Add To Cart</button>&nbsp;&nbsp;
+          <div *ngIf="isItemAdded">
+            <button class="btn btn-danger" (click)="addToCart(foodDetails[0])">+</button>&nbsp;&nbsp;
+            <span>{{quantity}}</span>&nbsp;&nbsp;
+            <button class="btn btn-danger" (click)="removeFromCart(foodDetails[0].id)">-</button>&nbsp;&nbsp;
+          </div>&nbsp;&nbsp;
+          <button class="btn btn-primary btn-lg btn-block" (click)="backFunction()">Back</button>
+        </div>
+
+    </div>
+  </div>
+</div>
+<div class="container">
+
+</div>
